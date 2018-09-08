@@ -1,14 +1,21 @@
-#import config
+from config import functions 
+from config import only_same
 import itertools
 import os
+import re
 
-files=[]
+information=[]
+for fileName in os.walk("/home/kirill/task/itr-task1/blur"):
+    information.extend(fileName)
+files = information[2]
 
-for fileName in os.walk("task1/blur"):
-    files.append(fileName)
+path = "/home/kirill/task/itr-task1/blur/"
+array = only_same(itertools.combinations(files, 2))
+for firstFile,secondFile in array:
+    percent = functions[re.findall(r'\..+', firstFile)[0]](path+firstFile, path+secondFile)
+    print percent
 
-for firstFile,secondFile in itertools.combinations(files, 2):
-    print(firstFile+" "+secondFile)
+
 '''def imageComparison( firstFile, secondFile):
     from diffimg import diff
     return round(diff(firstFile,secondFile));
