@@ -15,7 +15,7 @@ for firstFile,secondFile in array:
     percent = functions[re.findall(r'\..+', firstFile)[0]](path+firstFile, path+secondFile)
     print percent
 
-
+#dfgd
 '''def imageComparison( firstFile, secondFile):
     from diffimg import diff
     return round(diff(firstFile,secondFile));
