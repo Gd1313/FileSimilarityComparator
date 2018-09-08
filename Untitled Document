@@ -1,0 +1,13 @@
+"/home/user/Desktop/task1/itr-task1/blur/"
+ except KeyError:        
+        percent = compareText(path+item1, path+item2)
+        #if percent > inputPercent:
+            #print ("File {0} simular to file {1} with {3} %".format(item1,item2,percent))
+
+#try:
+
+   '''except KeyError: 
+                percent = compareText(path+item1, path+item2)
+                print ('File {0} simular to file {1} with {2} %'.format(item1,item2,percent))'''
+
+        #if percent > inputPercent:
